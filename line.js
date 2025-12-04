@@ -1,35 +1,68 @@
+let lines = [];
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
-}
+  stroke(255);
+  noFill();
 
-let phase = 0;
+  let numLines = 150;
+  let spacing = 7;
+
+  for (let i = 0; i < numLines; i++) {
+    let y = height/2 - (numLines * spacing)/2 + i * spacing;
+
+    // center lines bend more — classic Unknown Pleasures
+    let distortion = map(
+      abs(i - numLines/0.5),
+      0,
+      numLines/2,
+      120,   // most distortion
+      10     // least distortion at edges
+    );
+
+    lines.push(new PleasureLine(y, distortion));
+  }
+}
 
 function draw() {
   background(0);
-  for (let i = 0; i < 1; i++) {
-    let line = new Line(0, windowHeight/2 - (i * 10), windowWidth, windowHeight/2 - (i * 10))
-    line.show();
-  }
-  for (let i = 0; i < 0; i++) {
-    let line = new Line(0, windowHeight/2 + (i * 10), windowWidth, windowHeight/2 + (i * 10))
-    line.show();
+
+  for (let ln of lines) {
+    ln.update();
+    ln.show();
   }
 }
 
-class Line {
-  constructor(x1, y1, x2, y2) {
-    this.x1 = x1;
-    this.y1 = y1;
-    this.x2 = x2;
-    this.y2 = y2;
+class PleasureLine {
+  constructor(y, amplitude) {
+    this.y = y;              // vertical position of the line
+    this.amp = amplitude;    // how much it bends
+    this.phase = random(9999); // noise offset for uniqueness
+    this.speed = 0.01;      // animation speed
+  }
+
+  update() {
+    this.phase += this.speed;
   }
 
   show() {
-    line(this.x1, this.y1, this.x2, this.y2);
-    stroke(255)
-  }
+    beginShape();
 
-  wave() {
-    
+    let steps = 400;         // resolution of the wavy line
+    for (let i = 0; i < steps; i++) {
+      let t = i / steps;     // goes 0 → 1
+      let x = t * width;
+
+      // Perlin noise gives organic "mountain ridges"
+      let n = noise(this.phase + t * 6);
+
+      // Turn noise into bending
+      let offset = map(n, 0, 1, -this.amp, this.amp);
+
+      vertex(x, this.y + offset);
+    }
+
+    endShape();
   }
 }
+
