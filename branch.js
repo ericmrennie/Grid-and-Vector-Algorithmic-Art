@@ -1,6 +1,6 @@
 let branches = [];
-let maxBranches = 1000; // max number of active branches
-let initialBranches = 60; // number of branches to start with
+let maxBranches = 2000; // max number of active branches
+let initialBranches = 100; // number of branches to start with
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -15,14 +15,14 @@ function setup() {
       x: width / 2,
       y: height / 2,
       angle: angle,
-      len: 2,
+      len: 5,
       lifespan: 400
     });
   }
 }
 
 function draw() {
-  background(0, 20); // fading trail
+  background(0, 10); // fading trail
 
   let newBranches = [];
 
@@ -51,14 +51,14 @@ function draw() {
             x: x2,
             y: y2,
             angle: b.angle + random(PI / 6, PI / 3),
-            len: b.len * 0.8,
+            len: b.len,
             lifespan: int(b.lifespan * 0.8)
           });
           newBranches.push({
             x: x2,
             y: y2,
             angle: b.angle - random(PI / 6, PI / 3),
-            len: b.len * 0.8,
+            len: b.len,
             lifespan: int(b.lifespan * 0.8)
           });
         }
@@ -74,12 +74,12 @@ function draw() {
   }
 
   // optional: still add a few new branches for density
-  if (frameCount % 50 === 0) {
+  if (frameCount % 1 === 0) {
     branches.push({
       x: width / 2,
       y: height / 2,
       angle: random(TWO_PI),
-      len: 2,
+      len: 5,
       lifespan: 200
     });
   }
