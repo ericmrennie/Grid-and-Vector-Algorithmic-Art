@@ -16,7 +16,7 @@ function setup() {
       y: height / 2,
       angle: angle,
       len: 5,
-      lifespan: 400
+      lifespan: 400 // how long the branch will last
     });
   }
 }
@@ -27,37 +27,36 @@ function draw() {
   let newBranches = [];
 
   for (let b of branches) {
-    let x2 = b.x + cos(b.angle) * b.len;
-    let y2 = b.y + sin(b.angle) * b.len;
+    let x2 = b.x + cos(b.angle) * b.len; // x offset
+    let y2 = b.y + sin(b.angle) * b.len; // y offset
 
-    if (x2 > 0 && x2 < width && y2 > 0 && y2 < height) {
+    if (x2 > 0 && x2 < width && y2 > 0 && y2 < height) { // ensures branch doesn't go off canvas
       strokeWeight(1);
       line(b.x, b.y, x2, y2);
 
-      b.lifespan--;
+      b.lifespan--; // update branch lifespan
       if (b.lifespan > 0) {
-        // smooth wiggle
         newBranches.push({
           x: x2,
           y: y2,
-          angle: b.angle + random(-0.5, 0.5),
-          len: b.len,
-          lifespan: b.lifespan
+          angle: b.angle + random(-0.5, 0.5), // more Perlin noise
+          len: b.len, // new branch inherits len from parent
+          lifespan: b.lifespan // new branch inherits lifespan from parent
         });
 
-        // occasional branching
+        // 3% chance per frame to create two new branches
         if (random(1) < 0.03) {
           newBranches.push({
             x: x2,
             y: y2,
-            angle: b.angle + random(PI / 6, PI / 3),
+            angle: b.angle + random(PI / 6, PI / 3), // angled right
             len: b.len,
             lifespan: int(b.lifespan * 0.8)
           });
           newBranches.push({
             x: x2,
             y: y2,
-            angle: b.angle - random(PI / 6, PI / 3),
+            angle: b.angle - random(PI / 6, PI / 3), // angled left
             len: b.len,
             lifespan: int(b.lifespan * 0.8)
           });
@@ -66,21 +65,19 @@ function draw() {
     }
   }
 
-  branches = newBranches;
+  branches = newBranches; // update branches with newBranches
 
   // enforce max branches
   if (branches.length > maxBranches) {
     branches.splice(0, branches.length - maxBranches);
   }
 
-  // optional: still add a few new branches for density
-  if (frameCount % 1 === 0) {
-    branches.push({
-      x: width / 2,
-      y: height / 2,
-      angle: random(TWO_PI),
-      len: 5,
-      lifespan: 200
-    });
-  }
+  // add a few new branches for density
+  branches.push({
+    x: width / 2,
+    y: height / 2,
+    angle: random(TWO_PI),
+    len: 5,
+    lifespan: 200
+  });
 }

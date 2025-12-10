@@ -5,7 +5,7 @@ function setup() {
 }
 
 function draw() {
-  translate(width/2, height);
+  translate(width/2, height); // begin drawing from bottom center
   branch(200);
 }
 
@@ -16,16 +16,16 @@ function branch(len) {
   translate(0, -len);
   // stop when branches get very small
   if (len > 1) {
-    // RIGHT BRANCH
+    // right branch
     push();
-    rotate(PI/6);        // angle for right branch
-    branch(len * 0.67);  // recursive branch
+    rotate(PI/6); // angle for right branch
+    branch(len * 0.67); // recursive branch
     pop();
 
-    // LEFT BRANCH
+    // left branch
     push();
-    rotate(-PI/6);       // angle for left branch
-    branch(len * 0.7);  // recursive branch
+    rotate(-PI/6); // angle for left branch
+    branch(len * 0.7); // recursive branch
     pop();
   }
 }
