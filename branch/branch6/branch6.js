@@ -13,7 +13,7 @@ function setup() {
   stroke(255);
   frameRate(60);
 
-  // Spawn branches evenly in 360°
+  // Spawn branches evenly around center
   for (let i = 0; i < initialBranches; i++) {
     let angle = map(i, 0, initialBranches, 0, TWO_PI);
     branches.push({
