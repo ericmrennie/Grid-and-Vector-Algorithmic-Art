@@ -2,10 +2,10 @@ let branches = [];
 let maxBranches = 10000;
 let initialBranches = 5000;
 
-let noiseScale = 12000;
-let noiseStrength = 3;     // controls field curvature
-let noiseZ = 0;
-let noiseZVelocity = 0.005; // temporal evolution
+let noiseScale = 12000; // size of the noise field
+let noiseStrength = 3; // controls field curvature
+let noiseZ = 0; // z-coordinate of 3D noise
+let noiseZVelocity = 0.005; // how much noise; higher value = faster motion / more dynamic field
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -32,18 +32,19 @@ function draw() {
   let newBranches = [];
 
   for (let b of branches) {
-    // --- Perlin-driven angle modification ---
-    let n = noise(b.x / noiseScale, b.y / noiseScale, noiseZ);
-    let flowAngle = n * TWO_PI * noiseStrength;
+    // Perlin angle modification
+    let n = noise(b.x / noiseScale, b.y / noiseScale, noiseZ); // generates Perlin noise (smooth random value between 0 and 1)
+    let flowAngle = n * TWO_PI * noiseStrength; // converts the noise value into an angle in radians
 
-    // Replace the old wiggle with noise flow
+    // converts flowAngle into x and y movement 
     let dx = cos(flowAngle) * b.len;
     let dy = sin(flowAngle) * b.len;
 
+    // new position for this branch
     let x2 = b.x + dx;
     let y2 = b.y + dy;
 
-    if (x2 > 0 && x2 < width && y2 > 0 && y2 < height) {
+    if (x2 > 0 && x2 < width && y2 > 0 && y2 < height) { // ensures branch doesn't go off canvas
       strokeWeight(1.5);
       line(b.x, b.y, x2, y2);
 
@@ -54,19 +55,19 @@ function draw() {
         newBranches.push({
           x: x2,
           y: y2,
-          angle: flowAngle,
+          angle: flowAngle, // branch follows Perlin noise flow
           len: b.len,
           lifespan: b.lifespan
         });
 
-        // --- Perlin-controlled branching probability ---
+        // random Perlin controlled branching
         if (random(1) < 0.03) {
           let branchAngleOffset = random(PI / 6, PI / 2);
 
           newBranches.push({
             x: x2,
             y: y2,
-            angle: flowAngle + branchAngleOffset,
+            angle: flowAngle + branchAngleOffset, // angled to the right
             len: b.len,
             lifespan: int(b.lifespan)
           });
@@ -74,7 +75,7 @@ function draw() {
           newBranches.push({
             x: x2,
             y: y2,
-            angle: flowAngle - branchAngleOffset,
+            angle: flowAngle - branchAngleOffset, // one angled to the left
             len: b.len,
             lifespan: int(b.lifespan)
           });
@@ -89,7 +90,7 @@ function draw() {
     branches.splice(0, branches.length - maxBranches);
   }
 
-  // Keep the center seeding branches over time
+  // keep the center seeding branches over time
   if (frameCount % 2 === 0) {
     branches.push({
       x: width / 2,
@@ -100,7 +101,7 @@ function draw() {
     });
   }
 
-  noiseZ += noiseZVelocity;
+  noiseZ += noiseZVelocity; // updating the z-coordinate of the Perlin noise field over time; branches gradually shift direction over time
 }
 
 
