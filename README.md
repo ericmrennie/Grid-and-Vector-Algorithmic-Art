@@ -17,7 +17,7 @@ them rotate – two clockwise, two counterclockwise – around the center. As th
 overlapping lines generate shifting polygons and a pulsing of plaid-like squares that change
 size.
 
-Click the thumbnail to watch! **Be sure video quality settings are set to 1080p60 HD**
+Click the thumbnail to watch! ***Be sure video quality settings are set to 1080p60 HD.***
 [![Watch the video](https://img.youtube.com/vi/b23GS_HiA8Y/maxresdefault.jpg)](https://www.youtube.com/watch?v=b23GS_HiA8Y)
 
 
@@ -27,7 +27,7 @@ now it seems to rotate and jump around the composition, almost like shifting fro
 another on a map. When the spacing gets very small, it resembles TV static and the squares
 appear to spin.
 
-Click the thumbnail to watch! **Be sure video quality settings are set to 1080p60 HD**
+Click the thumbnail to watch! ***Be sure video quality settings are set to 1080p60 HD.***
 [![Watch the video](https://img.youtube.com/vi/CIu96oFWLxs/maxresdefault.jpg)](https://www.youtube.com/watch?v=CIu96oFWLxs)
 
 
