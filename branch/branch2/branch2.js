@@ -11,7 +11,7 @@ function draw() {
   for (let i = 0; i < numBranches; i++) {
     push();
     rotate((TWO_PI / numBranches) * i); // even 360° spread of branches
-    branch(120); // recursive branch call
+    branch(100); // recursive branch call
     pop();
   }
 }

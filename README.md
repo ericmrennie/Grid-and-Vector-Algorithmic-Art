@@ -17,14 +17,21 @@ them rotate – two clockwise, two counterclockwise – around the center. As th
 overlapping lines generate shifting polygons and a pulsing of plaid-like squares that change
 size.
 
-[![Watch the video](https://www.youtube.com/watch?v=b23GS_HiA8Y.jpg)](https://www.youtube.com/watch?v=b23GS_HiA8Y)
+Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
+[![Watch the video](https://img.youtube.com/vi/b23GS_HiA8Y/maxresdefault.jpg)](https://www.youtube.com/watch?v=b23GS_HiA8Y)
 
+![François Morellet 4 Grids 0° 22.5° -45° -67.5°](Images/Morellet.png)
+
+François Morellet *4 Grids 0° 22.5° -45° -67.5°* (1958)
 
 In the next iteration, I kept the same set of grids but added oscillation to the spacing between
 the horizontal and vertical lines. The plaid-like pulsing from the first example is still there, but
 now it seems to rotate and jump around the composition, almost like shifting from one spot to
 another on a map. When the spacing gets very small, it resembles TV static and the squares
 appear to spin.
+
+Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
+[![Watch the video](https://img.youtube.com/vi/CIu96oFWLxs/maxresdefault.jpg)](https://www.youtube.com/watch?v=CIu96oFWLxs)
 
 After the grid, I moved into a series of works built around vectors, specifically branching vectors.
 I started with a simple, static branching system where a single branch recursively generates left
@@ -33,10 +40,14 @@ continues until the branch length drops below a pixel. The result is tree-like, 
 splitting into two. At the edges, the dense concentration of tiny branches forms a fractal pattern,
 and the overall structure starts to resemble a brain.
 
+![Branch Series (Iteration 1)](Images/branch1Image.png)
+
 In the next iteration, I moved the origin to the center of the sketch and began with twelve equally
 spaced branches radiating outward. From there, the recursion continues until the branches
 shrink to a length of ten. This produces a sharp star shape in the center and a larger fractal
 structure at the outer edges.
+
+![Branch Series (Iteration 2)](Images/branch2Image.png)
 
 From here, the complexity increases. I added real-time branching still emerging from the center.
 The central star remains, but now the system grows as new branches are continually added to
@@ -44,16 +55,37 @@ an array. Multiple branches are drawn per frame to keep the growth smooth. Branc
 number of children, and slight jitter are all randomized to make the structure feel more organic
 and less symmetrical. This version resembles Casey Reas’ *Process 6 (Image 4)* from 2005.
 
+Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
+[![Watch the video](https://img.youtube.com/vi/RvlLNzHbFsY/maxresdefault.jpg)](https://www.youtube.com/watch?v=RvlLNzHbFsY)
+
+![Casey Reas Process 6 (Image 4)](Images/Reas.png)
+
+Casey Reas *Process 6 (Image 4)* (2005)
+
 In the fourth iteration, I begin with 100 branches at the center, each with a lifespan of 400
 frames and a subtle Perlin noise influence. Branches near the outer edges die sooner than
-those near the center. New branches constantly emerge, so the piece is always in motion. The
-fifth iteration is nearly identical except for an increase in the Perlin noise strength.
+those near the center. New branches constantly emerge, so the piece is always in motion. 
+
+Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
+[![Watch the video](https://img.youtube.com/vi/hFetLMhYtuw/maxresdefault.jpg)](https://www.youtube.com/watch?v=hFetLMhYtuw)
+
+The fifth iteration is nearly identical except for an increase in the Perlin noise strength.
+
+Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
+[![Watch the video](https://img.youtube.com/vi/iC42v7hlP9c/maxresdefault.jpg)](https://www.youtube.com/watch?v=iC42v7hlP9c)
 
 In iteration six, the direction of each branch is controlled entirely by a Perlin noise flow field. This
 creates smooth and coordinated motion that mimics smoke or fluid. The branching remains
 randomized, but the flow field causes the branches to drift outward in unison and then peel
 apart when the field curves. The trails left behind form a secondary image within the piece. This
 iteration is inspired by Ben Laposky’s *Oscillon* series from 1952.
+
+Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
+[![Watch the video](https://img.youtube.com/vi/zOvFamRPzQ4/maxresdefault.jpg)](https://www.youtube.com/watch?v=zOvFamRPzQ4)
+
+![Ben Laposky Oscillon (1952)](Images/Laposky.png)
+
+Ben Laposky *Oscillon* (1952)
 
 The most challenging part of this project was programming the branching series, especially
 when I started working on expansion and trying to make the growth feel organic. Getting the
