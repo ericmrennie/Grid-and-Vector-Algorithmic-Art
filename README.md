@@ -17,7 +17,7 @@ them rotate – two clockwise, two counterclockwise – around the center. As th
 overlapping lines generate shifting polygons and a pulsing of plaid-like squares that change
 size.
 
-Click the thumbnail to watch! ***Be sure video quality settings are set to 1080p60 HD.***
+Click the thumbnail to watch! ***Make sure video quality settings are set to 1080p60 HD.***
 [![Watch the video](https://img.youtube.com/vi/b23GS_HiA8Y/maxresdefault.jpg)](https://www.youtube.com/watch?v=b23GS_HiA8Y)
 
 
@@ -27,7 +27,7 @@ now it seems to rotate and jump around the composition, almost like shifting fro
 another on a map. When the spacing gets very small, it resembles TV static and the squares
 appear to spin.
 
-Click the thumbnail to watch! ***Be sure video quality settings are set to 1080p60 HD.***
+Click the thumbnail to watch! ***Make sure video quality settings are set to 1080p60 HD.***
 [![Watch the video](https://img.youtube.com/vi/CIu96oFWLxs/maxresdefault.jpg)](https://www.youtube.com/watch?v=CIu96oFWLxs)
 
 
@@ -37,6 +37,8 @@ and right branches. Each new branch begins at the end of the previous one, and t
 continues until the branch length drops below a pixel. The result is tree-like, with each segment
 splitting into two. At the edges, the dense concentration of tiny branches forms a fractal pattern,
 and the overall structure starts to resemble a brain.
+
+![Example Image](Images/branch1Image.png)
 
 In the next iteration, I moved the origin to the center of the sketch and began with twelve equally
 spaced branches radiating outward. From there, the recursion continues until the branches
