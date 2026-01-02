@@ -20,6 +20,9 @@ size.
 Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
 [![Watch the video](https://img.youtube.com/vi/b23GS_HiA8Y/maxresdefault.jpg)](https://www.youtube.com/watch?v=b23GS_HiA8Y)
 
+![François Morellet 4 Grids 0° 22.5° -45° -67.5°](Images/Morellet.png)
+François Morellet *4 Grids 0° 22.5° -45° -67.5°* (1958)
+
 In the next iteration, I kept the same set of grids but added oscillation to the spacing between
 the horizontal and vertical lines. The plaid-like pulsing from the first example is still there, but
 now it seems to rotate and jump around the composition, almost like shifting from one spot to
@@ -54,6 +57,9 @@ and less symmetrical. This version resembles Casey Reas’ *Process 6 (Image 4)*
 Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
 [![Watch the video](https://img.youtube.com/vi/RvlLNzHbFsY/maxresdefault.jpg)](https://www.youtube.com/watch?v=RvlLNzHbFsY)
 
+![Casey Reas Process 6 (Image 4)](Images/Reas.png)
+Casey Reas *Process 6 (Image 4)* (2005)
+
 In the fourth iteration, I begin with 100 branches at the center, each with a lifespan of 400
 frames and a subtle Perlin noise influence. Branches near the outer edges die sooner than
 those near the center. New branches constantly emerge, so the piece is always in motion. 
@@ -74,6 +80,9 @@ iteration is inspired by Ben Laposky’s *Oscillon* series from 1952.
 
 Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
 [![Watch the video](https://img.youtube.com/vi/zOvFamRPzQ4/maxresdefault.jpg)](https://www.youtube.com/watch?v=zOvFamRPzQ4)
+
+![Ben Laposky Oscillon (1952)](Images/Laposky.png)
+Ben Laposky *Oscillon* (1952)
 
 The most challenging part of this project was programming the branching series, especially
 when I started working on expansion and trying to make the growth feel organic. Getting the
