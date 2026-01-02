@@ -17,7 +17,7 @@ them rotate – two clockwise, two counterclockwise – around the center. As th
 overlapping lines generate shifting polygons and a pulsing of plaid-like squares that change
 size.
 
-Click the thumbnail to watch! ***Make sure video quality settings are set to 1080p60 HD.***
+Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
 [![Watch the video](https://img.youtube.com/vi/b23GS_HiA8Y/maxresdefault.jpg)](https://www.youtube.com/watch?v=b23GS_HiA8Y)
 
 In the next iteration, I kept the same set of grids but added oscillation to the spacing between
@@ -26,7 +26,7 @@ now it seems to rotate and jump around the composition, almost like shifting fro
 another on a map. When the spacing gets very small, it resembles TV static and the squares
 appear to spin.
 
-Click the thumbnail to watch! ***Make sure video quality settings are set to 1080p60 HD.***
+Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
 [![Watch the video](https://img.youtube.com/vi/CIu96oFWLxs/maxresdefault.jpg)](https://www.youtube.com/watch?v=CIu96oFWLxs)
 
 After the grid, I moved into a series of works built around vectors, specifically branching vectors.
@@ -51,19 +51,19 @@ an array. Multiple branches are drawn per frame to keep the growth smooth. Branc
 number of children, and slight jitter are all randomized to make the structure feel more organic
 and less symmetrical. This version resembles Casey Reas’ *Process 6 (Image 4)* from 2005.
 
-Click the thumbnail to watch! ***Make sure video quality settings are set to 1080p60 HD.***
+Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
 [![Watch the video](https://img.youtube.com/vi/RvlLNzHbFsY/maxresdefault.jpg)](https://www.youtube.com/watch?v=RvlLNzHbFsY)
 
 In the fourth iteration, I begin with 100 branches at the center, each with a lifespan of 400
 frames and a subtle Perlin noise influence. Branches near the outer edges die sooner than
 those near the center. New branches constantly emerge, so the piece is always in motion. 
 
-Click the thumbnail to watch! ***Make sure video quality settings are set to 1080p60 HD.***
+Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
 [![Watch the video](https://img.youtube.com/vi/hFetLMhYtuw/maxresdefault.jpg)](https://www.youtube.com/watch?v=hFetLMhYtuw)
 
 The fifth iteration is nearly identical except for an increase in the Perlin noise strength.
 
-Click the thumbnail to watch! ***Make sure video quality settings are set to 1080p60 HD.***
+Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
 [![Watch the video](https://img.youtube.com/vi/iC42v7hlP9c/maxresdefault.jpg)](https://www.youtube.com/watch?v=iC42v7hlP9c)
 
 In iteration six, the direction of each branch is controlled entirely by a Perlin noise flow field. This
@@ -72,7 +72,7 @@ randomized, but the flow field causes the branches to drift outward in unison an
 apart when the field curves. The trails left behind form a secondary image within the piece. This
 iteration is inspired by Ben Laposky’s *Oscillon* series from 1952.
 
-Click the thumbnail to watch! ***Make sure video quality settings are set to 1080p60 HD.***
+Right click the thumbnail to watch in a new tab! ***Make sure video quality settings are set to 1080p60 HD.***
 [![Watch the video](https://img.youtube.com/vi/zOvFamRPzQ4/maxresdefault.jpg)](https://www.youtube.com/watch?v=zOvFamRPzQ4)
 
 The most challenging part of this project was programming the branching series, especially
