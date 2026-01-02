@@ -17,6 +17,9 @@ them rotate – two clockwise, two counterclockwise – around the center. As th
 overlapping lines generate shifting polygons and a pulsing of plaid-like squares that change
 size.
 
+[![Watch the video](https://www.youtube.com/watch?v=b23GS_HiA8Y.jpg)](https://www.youtube.com/watch?v=b23GS_HiA8Y)
+
+
 In the next iteration, I kept the same set of grids but added oscillation to the spacing between
 the horizontal and vertical lines. The plaid-like pulsing from the first example is still there, but
 now it seems to rotate and jump around the composition, almost like shifting from one spot to
