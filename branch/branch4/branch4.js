@@ -1,5 +1,5 @@
 let branches = [];
-let maxBranches = 2000; // max number of active branches
+let maxBranches = 1000; // max number of active branches
 let initialBranches = 100; // number of branches to start with
 
 function setup() {
