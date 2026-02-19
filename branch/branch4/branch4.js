@@ -1,3 +1,6 @@
+// Trigonometric and geometric derivations assisted by an LLM.
+// Implementation reviewed and validated by the author.
+
 let branches = [];
 let maxBranches = 1000; // max number of active branches
 let initialBranches = 100; // number of branches to start with
