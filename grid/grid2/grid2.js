@@ -1,3 +1,7 @@
+// Geometric derivations assisted by an LLM.
+// Implementation reviewed and validated by the author.
+
+
 let t = 0; // time
 
 function setup() {

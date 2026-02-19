@@ -1,3 +1,6 @@
+// Geometric derivations assisted by an LLM.
+// Implementation reviewed and validated by the author.
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
